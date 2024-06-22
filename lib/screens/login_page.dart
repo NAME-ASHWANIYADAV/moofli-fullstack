@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_signin_button/flutter_signin_button.dart';
+
 
 class Login_Page extends StatefulWidget {
   const Login_Page({super.key});
@@ -31,7 +31,8 @@ class _Login_PageState extends State<Login_Page> {
 
              
               const SizedBox(height: 20.0),
-              const Text('Welcome!', textAlign: TextAlign.center),
+              const Text('Welcome!', textAlign: TextAlign.center, style: TextStyle(fontFamily: "Poppins", fontSize: 27, fontWeight: FontWeight.w400, color: Color.fromRGBO(0, 0, 0, 1),
+  ),),
               const SizedBox(height: 20.0),
               TextFormField(
                 decoration:
@@ -94,8 +95,8 @@ class _Login_PageState extends State<Login_Page> {
                child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              width: 317,
-              height: 70,
+              width: 340,
+              height: 73,
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                
@@ -128,8 +129,8 @@ class _Login_PageState extends State<Login_Page> {
                               },
                             ),
                           ),
-                          const VerticalDivider( width: 1.0,
-                  thickness: 1.0,
+                          const VerticalDivider(
+                  thickness: 2.0,
                   color: Colors.black,), // Divider between buttons
                           Expanded(
                             child: IconButton(
@@ -144,15 +145,17 @@ class _Login_PageState extends State<Login_Page> {
                             ),
                           ),
                           const VerticalDivider(
-                             width: 1.0,
-                  thickness: 1.0,
-                  color: Colors.black,
+                             
+                   width: 1.0,
+                thickness: 59.0, // Set thickness to make it bold
+                color: Color.fromRGBO(50, 50, 50, 1)
+                ,
                           ), // Divider between buttons
                           Expanded(
                             child: IconButton(
                               icon: SizedBox(
-                                width: 37.0,
-                                height: 37.0,
+                                width: 40.0,
+                                height: 40.7,
                                 child: Image.asset('images/skillop_logo.png'),
                               ),
                               onPressed: () {
@@ -175,27 +178,35 @@ class _Login_PageState extends State<Login_Page> {
                 text: '''By signing up or logging in, you agree to 
   our ''', 
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Color.fromRGBO(106, 106, 106, 1),
                   fontSize: 16.0,
+                  fontFamily: "Poppins",
                 ),
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Terms of service',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      textBaseline: TextBaseline.alphabetic
+                      color: Colors.black,
+                      fontFamily: "Poppins",
+                      decoration: TextDecoration.underline
                     ),
                   ),
                   TextSpan(
                     text: ' and ',
                     style: TextStyle(
+                      color: Color.fromRGBO(106, 106, 106, 1),
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.normal,
                     ),
                   ),
                   TextSpan(
                     text: 'Privacy policy',
                     style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline
                     ),
                   ),
                 ],
@@ -206,7 +217,7 @@ class _Login_PageState extends State<Login_Page> {
              
         
               const SizedBox(height: 20.0),
-              const Text('Don\'t have an account?', textAlign: TextAlign.center),
+              const Text('Don\'t have an account?', textAlign: TextAlign.center , style: TextStyle(fontFamily: "Poppins",color: Color.fromRGBO(106, 106, 106, 1),), ),
               TextButton(
                 onPressed: () {
                   // Add your password recovery logic here
@@ -215,7 +226,7 @@ class _Login_PageState extends State<Login_Page> {
                     foregroundColor: const Color.fromRGBO(155, 0, 210, 1.0)
                     // This sets the text color
                     ),
-                child: const Text('Sign Up'),
+                child: const Text('Sign Up' , style: TextStyle(fontFamily: "Poppins",),),
               ),
             ],
           ),
