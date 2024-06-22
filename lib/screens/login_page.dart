@@ -13,7 +13,7 @@ class _Login_PageState extends State<Login_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Flexible(
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -129,9 +129,11 @@ class _Login_PageState extends State<Login_Page> {
                               },
                             ),
                           ),
-                          const VerticalDivider(
-                  thickness: 2.0,
-                  color: Colors.black,), // Divider between buttons
+                         Container(
+                  height: 50, // Adjust height as needed
+                  width: 2, // Set the thickness of the divider
+                  color: const Color.fromRGBO(50, 50, 50, 1)
+                ),
                           Expanded(
                             child: IconButton(
                               icon: SizedBox(
@@ -144,13 +146,11 @@ class _Login_PageState extends State<Login_Page> {
                               },
                             ),
                           ),
-                          const VerticalDivider(
-                             
-                   width: 1.0,
-                thickness: 59.0, // Set thickness to make it bold
-                color: Color.fromRGBO(50, 50, 50, 1)
-                ,
-                          ), // Divider between buttons
+                          Container(
+                  height: 50, // Adjust height as needed
+                  width: 2, // Set the thickness of the divider
+                  color: const Color.fromRGBO(50, 50, 50, 1)
+                ),// Divider between buttons
                           Expanded(
                             child: IconButton(
                               icon: SizedBox(
@@ -172,7 +172,34 @@ class _Login_PageState extends State<Login_Page> {
             ),
                ),
                const SizedBox(height: 10.0),
+               Row(
+                
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        
+        CheckboxTheme(
+          data: const CheckboxThemeData(
+            side: BorderSide(color: Color.fromRGBO(155, 0, 210, 1.0) , width: 2), 
+    
+          ), child: 
+        
+        Checkbox(
+          
+          
+          value: _isChecked,
+          onChanged: (bool? value) {
+            setState(() {
+              _isChecked = value ?? false;
+            });
+          },
+        ),
+        ),
+        
+        const Text('Do you want to know the news?' , style: TextStyle(color: Color.fromRGBO(9, 9, 9, 1), fontFamily: "Poppins"),),
+      ],
+    ),
 
+  const SizedBox(height: 10.0),
            RichText( textAlign: TextAlign.center,
               text: const TextSpan(
                 text: '''By signing up or logging in, you agree to 
@@ -237,43 +264,4 @@ class _Login_PageState extends State<Login_Page> {
 }
 
 
- // ElevatedButton.icon(
-    //   icon: Image.asset('assets/google_logo.png'), // Replace with your asset path
-    //   label: const Text('Sign in with Google'),
-    //   onPressed: () {
-    //     // Handle Google sign-in
-    //   },
-    // ),
-
-     // ElevatedButton.icon(
-    //   icon: Image.asset('images/facebook_logo.png'), // Replace with your asset path
-    //   label: const Text('Sign in with Facebook'),
-    //   onPressed: () {
-    //     // Handle Facebook sign-in
-    //   },
-    // ),
-    // ElevatedButton.icon(      
-    //   icon: Image.asset('images/google_logo.png'), // Replace with your asset path
-    //   label: const Text('Sign in with Apple'),
-    //   onPressed: () {
-    //     // Handle Apple sign-in
-    //   },
-    // ),
-
-     // SignInButton(
-              //   Buttons.Google,
-              //   text: "Sign in with Google",
-              //   onPressed: () {
-              //     // Add your Google sign-in logic here
-              //   },
-              // ),
-              // SignInButton(
-              //   Buttons.Facebook,
-              //   text: "Sign in with Facebook",
-              //   onPressed: () {
-              //     // Add your Facebook sign-in logic here
-              //   },
-              // ),
-              // const SizedBox(height: 20.0),
-              
-              
+ 
