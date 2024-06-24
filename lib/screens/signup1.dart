@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mooflicheck/pages/signup2.dart';
-import 'package:mooflicheck/widgets/custom_text_field.dart';
-import 'package:mooflicheck/widgets/password_field.dart';
+import 'package:moofli_fullstack/screens/signup2.dart';
+import 'package:moofli_fullstack/widgets/custom_text_field.dart';
+import 'package:moofli_fullstack/widgets/password_field.dart';
 
 class SignupPage1 extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
