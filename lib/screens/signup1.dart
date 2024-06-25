@@ -26,7 +26,7 @@ class SignupPage1 extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
-              Image.asset('assets/logo.png', height: 100),
+              // Image.asset('assets/logo.png', height: 100),
               SizedBox(height: 20),
               CustomTextField(
                 hint: 'Username',
@@ -64,8 +64,8 @@ class SignupPage1 extends StatelessWidget {
                     onPressed: () => Navigator.of(context).pop(),
                     child: Text('Back'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blue,
+                      // primary: Colors.white,
+                      // onPrimary: Colors.blue,
                       side: BorderSide(color: Colors.blue),
                     ),
                   ),
@@ -82,7 +82,7 @@ class SignupPage1 extends StatelessWidget {
                       }
                     },
                     child: Text('Next'),
-                    style: ElevatedButton.styleFrom(primary: Colors.purple),
+                    // style: ElevatedButton.styleFrom(primary: Colors.purple),
                   ),
                 ],
               ),

@@ -89,8 +89,8 @@ class SignupPage2 extends StatelessWidget {
                     onPressed: () => Navigator.of(context).pop(),
                     child: Text('Back'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blue,
+                      // primary: Colors.white,
+                      // onPrimary: Colors.blue,
                       side: BorderSide(color: Colors.blue),
                     ),
                   ),
@@ -107,7 +107,7 @@ class SignupPage2 extends StatelessWidget {
                       }
                     },
                     child: Text('Next', style: TextStyle(color: Colors.white)),
-                    style: ElevatedButton.styleFrom(primary: Colors.purple),
+                    // style: ElevatedButton.styleFrom(primary: Colors.purple),
                   ),
                 ],
               ),
