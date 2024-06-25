@@ -3,9 +3,11 @@ import 'package:moofli_fullstack/screens/signup3.dart';
 import 'package:moofli_fullstack/widgets/custom_text_field.dart';
 
 class SignupPage2 extends StatelessWidget {
-  final Map<String, dynamic> formData;
+   SignupPage2({super.key});
 
-  SignupPage2({required this.formData});
+  final Map<String, dynamic> formData = {};
+
+  // SignupPage2({required this.formData});
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -13,11 +15,11 @@ class SignupPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign up', style: TextStyle(color: Colors.purple)),
+        title:const  Text('Sign up', style: TextStyle(color: Colors.purple)),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.purple),
+          icon: const Icon(Icons.arrow_back, color: Colors.purple),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -27,30 +29,30 @@ class SignupPage2 extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.grey.shade300,
                 child: IconButton(
-                  icon: Icon(Icons.camera_alt, size: 30),
+                  icon: const Icon(Icons.camera_alt, size: 30),
                   onPressed: () {
                     // Add functionality to capture or select a photo
                   },
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CustomTextField(
                 hint: 'First name',
                 onSaved: (value) => formData['first_name'] = value,
                 allowNumbers: false, // Disallow numbers in first name
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextField(
                 hint: 'Last name',
                 onSaved: (value) => formData['last_name'] = value,
                 allowNumbers: false, // Disallow numbers in last name
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
                   Expanded(
@@ -59,14 +61,14 @@ class SignupPage2 extends StatelessWidget {
                       onSaved: (value) => formData['birth_day'] = value,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: CustomTextField(
                       hint: 'MM',
                       onSaved: (value) => formData['birth_month'] = value,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: CustomTextField(
                       hint: 'YYYY',
@@ -75,24 +77,25 @@ class SignupPage2 extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextField(
                 hint: 'Phone number (Optional)',
                 icon: Icons.phone,
                 onSaved: (value) => formData['phone'] = value,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    child: Text('Back'),
+                    
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blue,
-                      side: BorderSide(color: Colors.blue),
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.blue,
+                      side: const BorderSide(color: Colors.blue),
                     ),
+                    child: const Text('Back'),
                   ),
                   ElevatedButton(
                     onPressed: () {
@@ -106,8 +109,9 @@ class SignupPage2 extends StatelessWidget {
                         );
                       }
                     },
-                    child: Text('Next', style: TextStyle(color: Colors.white)),
-                    style: ElevatedButton.styleFrom(primary: Colors.purple),
+                    
+                    style: ElevatedButton.styleFrom(foregroundColor: Colors.purple),
+                    child: const Text('Next', style: TextStyle(color: Colors.white)),
                   ),
                 ],
               ),

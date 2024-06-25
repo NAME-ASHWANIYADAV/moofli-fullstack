@@ -30,12 +30,12 @@ class _SignUp3State extends State<SignUp3> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.purple),
+          icon: const Icon(Icons.arrow_back, color: Colors.purple),
           onPressed: () {
             Navigator.pop(context); // Navigate back to the previous screen
           },
         ),
-        title: Text('Sign up', style: TextStyle(color: Colors.purple)),
+        title: const Text('Sign up', style: TextStyle(color: Colors.purple)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -43,9 +43,9 @@ class _SignUp3State extends State<SignUp3> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.all(10.0),
+              padding:const  EdgeInsets.all(10.0),
               color: Colors.lightGreenAccent,
-              child: Row(
+              child: const Row(
                 children: [
                   Icon(Icons.warning, color: Colors.yellow),
                   SizedBox(width: 10),
@@ -58,62 +58,62 @@ class _SignUp3State extends State<SignUp3> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               controller: countryController,
               decoration: InputDecoration(
                 labelText: 'Country',
-                labelStyle: TextStyle(color: Colors.grey),
+                labelStyle:const  TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               controller: stateController,
               decoration: InputDecoration(
                 labelText: 'State',
-                labelStyle: TextStyle(color: Colors.grey),
+                labelStyle: const TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               controller: cityController,
               decoration: InputDecoration(
                 labelText: 'City',
-                labelStyle: TextStyle(color: Colors.grey),
+                labelStyle:const  TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               controller: postalCodeController,
               decoration: InputDecoration(
                 labelText: 'Postal code',
-                labelStyle: TextStyle(color: Colors.grey),
+                labelStyle: const TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               controller: languageController,
               decoration: InputDecoration(
                 labelText: 'Language',
-                labelStyle: TextStyle(color: Colors.grey),
+                labelStyle: const TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               children: [
                 Checkbox(
@@ -124,21 +124,21 @@ class _SignUp3State extends State<SignUp3> {
                     });
                   },
                 ),
-                Text('Do you want to know the news ?')
+                const Text('Do you want to know the news ?')
               ],
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'By signing up or logging in, you agree to our Terms of service and Privacy policy',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.grey),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                  foregroundColor: Colors.purple,
+                  padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -146,7 +146,7 @@ class _SignUp3State extends State<SignUp3> {
                 onPressed: () {
                   // Handle sign up
                 },
-                child: Text('Done', style: TextStyle(color: Colors.white)),
+                child:const  Text('Done', style: TextStyle(color: Colors.white)),
               ),
             ),
           ],

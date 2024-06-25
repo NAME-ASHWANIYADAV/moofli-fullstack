@@ -4,6 +4,8 @@ import 'package:moofli_fullstack/widgets/custom_text_field.dart';
 import 'package:moofli_fullstack/widgets/password_field.dart';
 
 class SignupPage1 extends StatelessWidget {
+  SignupPage1({super.key});
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final Map<String, dynamic> formData = {};
 
@@ -11,11 +13,11 @@ class SignupPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign up', style: TextStyle(color: Colors.purple)),
+        title: const Text('Sign up', style: TextStyle(color: Colors.purple)),
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.purple),
+          icon: const Icon(Icons.arrow_back, color: Colors.purple),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
@@ -25,16 +27,16 @@ class SignupPage1 extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Image.asset('assets/logo.png', height: 100),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               CustomTextField(
                 hint: 'Username',
                 icon: Icons.person,
                 onSaved: (value) => formData['username'] = value,
                 allowNumbers: false, // Disallow numbers in username
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextField(
                 hint: 'Email',
                 icon: Icons.email,
@@ -46,43 +48,47 @@ class SignupPage1 extends StatelessWidget {
                   }
                 },
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               PasswordField(
                 hint: 'Password',
                 onSaved: (value) => formData['password'] = value,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               PasswordField(
                 hint: 'Confirm Password',
                 onSaved: (value) => formData['confirm_password'] = value,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    child: Text('Back'),
+                    
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.blue,
-                      side: BorderSide(color: Colors.blue),
+                      foregroundColor: Colors.white,
+                      
+                      side: const BorderSide(color: Colors.blue),
+                      
                     ),
+                    child:const Text('Back'),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      if (_formKey.currentState?.validate() ?? false) {
-                        _formKey.currentState?.save();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignupPage2(formData: formData),
-                          ),
-                        );
-                      }
+                      // if (_formKey.currentState?.validate() ?? false) {
+                      //   _formKey.currentState?.save();
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => SignupPage2(formData: formData),
+                      //     ),
+                      //   );
+                      // }
                     },
-                    child: Text('Next'),
-                    style: ElevatedButton.styleFrom(primary: Colors.purple),
+                    
+                    style: ElevatedButton.styleFrom(
+                      iconColor: Colors.purple),
+                      child:const  Text('Next'),
                   ),
                 ],
               ),
