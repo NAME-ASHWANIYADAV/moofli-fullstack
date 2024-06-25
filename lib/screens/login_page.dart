@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moofli_fullstack/screens/signup1.dart';
 
 
 class Login_Page extends StatefulWidget {
@@ -13,7 +14,7 @@ class _Login_PageState extends State<Login_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -247,6 +248,7 @@ class _Login_PageState extends State<Login_Page> {
               const Text('Don\'t have an account?', textAlign: TextAlign.center , style: TextStyle(fontFamily: "Poppins",color: Color.fromRGBO(106, 106, 106, 1),), ),
               TextButton(
                 onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignupPage1()));
                   // Add your password recovery logic here
                 },
                 style: TextButton.styleFrom(
