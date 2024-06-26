@@ -12,6 +12,7 @@ class SignupPage1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sign up', style: TextStyle(color: Colors.purple)),
