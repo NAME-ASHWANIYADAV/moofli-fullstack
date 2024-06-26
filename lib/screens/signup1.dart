@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moofli_fullstack/screens/signup2.dart';
+
 import 'package:moofli_fullstack/widgets/custom_text_field.dart';
 import 'package:moofli_fullstack/widgets/password_field.dart';
 
@@ -74,15 +75,15 @@ class SignupPage1 extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      // if (_formKey.currentState?.validate() ?? false) {
-                      //   _formKey.currentState?.save();
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => SignupPage2(formData: formData),
-                      //     ),
-                      //   );
-                      // }
+                      if (_formKey.currentState?.validate() ?? false) {
+                        _formKey.currentState?.save();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignupPage2(formData: formData),
+                          ),
+                        );
+                      }
                     },
                     child: Text('Next'),
                     // style: ElevatedButton.styleFrom(primary: Colors.purple),

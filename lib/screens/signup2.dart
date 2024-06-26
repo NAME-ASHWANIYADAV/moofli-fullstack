@@ -3,7 +3,7 @@ import 'package:moofli_fullstack/screens/signup3.dart';
 import 'package:moofli_fullstack/widgets/custom_text_field.dart';
 
 class SignupPage2 extends StatelessWidget {
-   SignupPage2({super.key});
+   SignupPage2({super.key, required Map<String, dynamic> formData});
 
   final Map<String, dynamic> formData = {};
 
