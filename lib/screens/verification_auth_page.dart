@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'verified_page.dart';
 
 class VerificationAuthPage extends StatefulWidget {
   const VerificationAuthPage({super.key});
@@ -229,6 +230,11 @@ class _VerificationAuthPageState extends State<VerificationAuthPage> {
               ),
               onPressed: () {
                 // Handle sign up
+                Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>  VerifiedScreen()),
+                          );
               },
               child: const Text('Done', style: TextStyle(color: Colors.white)),
             ),
