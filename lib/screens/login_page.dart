@@ -128,11 +128,13 @@ class _Login_PageState extends State<Login_Page> {
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          showSuccessMessage(context,
+                              message: 'Log in Successful');
                           // If the form is valid, navigate to the signup page
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => home_page()),
+                                builder: (context) => const home_page()),
                           );
                         } else {
                           // Show error message
